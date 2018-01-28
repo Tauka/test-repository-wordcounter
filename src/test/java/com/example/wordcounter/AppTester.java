@@ -24,5 +24,30 @@ public class AppTester {
         assertEquals("if empty words", 0, words);
     }
 
+    @Test
+    public void reader_test_4() {
+        int words = App.wordcount("The dog did not bark.But it did poop");
+        assertEquals("Testing dot", 9, words);
+    }
+
+    @Test
+    public void reader_test_5() {
+        int words = App.wordcount("The dog did not bark,But it did poop");
+        assertEquals("Testing comma", 9, words);
+    }
+
+    @Test
+    public void reader_test_6() {
+        int words = App.wordcount("The dog did not bark. $&*");
+        assertEquals("Testing special characters, it should not be word", 5, words);
+    }
+
+    @Test
+    public void reader_test_7() {
+        int words = App.wordcount("The dog did not bark$#^&*(){}[]But it did poop");
+        assertEquals("Dividing real words with special character", 9, words);
+    }
+
+
 }
 
