@@ -16,7 +16,7 @@ public class App
         List<String> words =  new LinkedList<String>(Arrays.asList(s
                 .replace(".", " ")
                 .replace(",", " ")
-                .replaceAll("[^a-zA-Z0-9\\s]", "")
+                .replaceAll("[^a-zA-Z0-9\\s]", " ")
                 .split(" ")));
 
         for (int i = 0; i < words.size(); i++) {
