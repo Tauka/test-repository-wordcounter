@@ -15,7 +15,7 @@ public class App
     public static int wordcount(String s) {
         List<String> words =  new LinkedList<String>(Arrays.asList(s
                 .replace(".", " ")
-                .replace(",", "")
+                .replace(",", " ")
                 .replaceAll("[^a-zA-Z0-9\\s]", "")
                 .split(" ")));
 
